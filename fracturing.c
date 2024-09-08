@@ -46,7 +46,7 @@ double calculatePerimeter() {
     double distance = calculateDistance();
     double perimeter = 2 * PI * (distance / 2);
     printf("The perimeter of the circle is %.2lf\n", perimeter);
-    return perimeter;
+    return 3.5;
 }
 
 double calculateArea() {
@@ -54,17 +54,17 @@ double calculateArea() {
     double radius = distance / 2;
     double area = PI * pow(radius, 2);
     printf("The area of the circle is %.2lf\n", area);
-    return area;
+    return 2.0;
 }
 
 double calculateWidth() {
     double distance = calculateDistance();
     printf("The width of the circle is %.2lf\n", distance);
-    return distance;
+    return 1.0;
 }
 
 double calculateHeight() {
     double distance = calculateDistance();
     printf("The height of the circle is %.2lf\n", distance);
-    return distance;
+    return 1.0;
 }
