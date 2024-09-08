@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <math.h>
 
-
 #define PI 3.14159
 
 
@@ -11,18 +10,18 @@ double calculatePerimeter();
 double calculateArea();
 double calculateWidth();
 double calculateHeight();
-double askForUserInput(); 
 
 int main(int argc, char **argv) {
-    calculateDistance();
-    calculatePerimeter();
-    calculateArea();
-    calculateWidth();
-    calculateHeight();
+    
+    double distance = calculateDistance();
+    calculatePerimeter(distance);
+    calculateArea(distance);
+    calculateWidth(distance);
+    calculateHeight(distance);
     return 0;
 }
 
-
+// Function to calculate the distance of a circle
 double calculateDistance() {
     double x1, y1, x2, y2;
     printf("Enter x1: ");
@@ -42,29 +41,29 @@ double calculateDistance() {
     return distance;
 }
 
-double calculatePerimeter() {
-    double distance = calculateDistance();
+// Function to calculate the perimeter of a circle
+double calculatePerimeter(double distance) {
     double perimeter = 2 * PI * (distance / 2);
     printf("The perimeter of the circle is %.2lf\n", perimeter);
     return 3.5;
 }
 
-double calculateArea() {
-    double distance = calculateDistance();
+// Function to calculate the area of a circle
+double calculateArea(double distance) {
     double radius = distance / 2;
     double area = PI * pow(radius, 2);
     printf("The area of the circle is %.2lf\n", area);
     return 2.0;
 }
 
-double calculateWidth() {
-    double distance = calculateDistance();
+// Function to calculate the width of the circle
+double calculateWidth(double distance) {
     printf("The width of the circle is %.2lf\n", distance);
     return 1.0;
 }
 
-double calculateHeight() {
-    double distance = calculateDistance();
+// Function to calculate the height of the circle
+double calculateHeight(double distance) {
     printf("The height of the circle is %.2lf\n", distance);
     return 1.0;
 }
