@@ -1,18 +1,19 @@
-
+//Takrim Nahin
 #include <stdio.h>
 #include <math.h>
 
 #define PI 3.14159
 
-
+// Function prototypes
 double calculateDistance();
 double calculatePerimeter();
 double calculateArea();
 double calculateWidth();
 double calculateHeight();
 
+// Main function that calls other functions
 int main(int argc, char **argv) {
-    
+    //calculate the distance and use it for other function
     double distance = calculateDistance();
     calculatePerimeter(distance);
     calculateArea(distance);
