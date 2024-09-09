@@ -10,6 +10,7 @@ double calculatePerimeter();
 double calculateArea();
 double calculateWidth();
 double calculateHeight();
+double askForUserInput();
 
 // Main function that calls other functions
 int main(int argc, char **argv) {
@@ -21,18 +22,23 @@ int main(int argc, char **argv) {
     calculateHeight(distance);
     return 0;
 }
+double askForUserInput() {
+    double input;
+    scanf("%lf",&input);
+    return input;
+}
 
 // Function to calculate the distance of a circle
 double calculateDistance() {
     double x1, y1, x2, y2;
     printf("Enter x1: ");
-    scanf("%lf", &x1);
+    x1 = askForUserInput();
     printf("Enter y1: ");
-    scanf("%lf", &y1);
+    y1 = askForUserInput();
     printf("Enter x2: ");
-    scanf("%lf", &x2);
+    x2 = askForUserInput();
     printf("Enter y2: ");
-    scanf("%lf", &y2);
+    y2 = askForUserInput();
     
     double distance = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
     printf("Point #1 entered: x1 = %.2lf; y1 = %.2lf\n", x1, y1);
